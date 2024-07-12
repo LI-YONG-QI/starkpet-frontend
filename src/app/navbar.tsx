@@ -1,9 +1,10 @@
 "use client";
+
 import { useAccount, useConnect, useDisconnect } from "@starknet-react/core";
 import { useStarknetkitConnectModal } from "starknetkit";
 
 export default function Navbar() {
-  const { connect, connectors, connectAsync } = useConnect();
+  const { connectors, connectAsync } = useConnect();
   const { disconnectAsync } = useDisconnect();
   const { address } = useAccount();
 

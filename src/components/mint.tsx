@@ -1,13 +1,13 @@
 "use client";
 
+import { TOKEN_ABI } from "@/abis/pet";
+import { TBA, TOKEN } from "@/constants";
 import {
   useAccount,
   useContract,
   useContractWrite,
 } from "@starknet-react/core";
-import { TOKEN_ABI } from "@/abis/pet";
 import { useMemo } from "react";
-import { TBA, TOKEN } from "@/constants";
 
 export const MintBtn = () => {
   const { address } = useAccount();

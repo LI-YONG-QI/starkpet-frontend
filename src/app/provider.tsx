@@ -1,17 +1,10 @@
 "use client";
+import { mainnet, sepolia } from "@starknet-react/chains";
+import { StarknetConfig, publicProvider, voyager } from "@starknet-react/core";
 import React from "react";
-
-import { sepolia, mainnet } from "@starknet-react/chains";
-import {
-  StarknetConfig,
-  argent,
-  publicProvider,
-  useInjectedConnectors,
-  voyager,
-} from "@starknet-react/core";
+import { ArgentMobileConnector } from "starknetkit/argentMobile";
 import { InjectedConnector } from "starknetkit/injected";
 import { WebWalletConnector } from "starknetkit/webwallet";
-import { ArgentMobileConnector } from "starknetkit/argentMobile";
 
 export function StarknetProvider({ children }: { children: React.ReactNode }) {
   const connectors = [

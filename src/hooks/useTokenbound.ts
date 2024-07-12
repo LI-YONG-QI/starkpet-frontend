@@ -1,12 +1,12 @@
+import { useAccount } from "@starknet-react/core";
+import { useEffect, useState } from "react";
+import { RPC } from "starknet";
 import {
   TokenboundClient,
   TokenboundClientOptions,
 } from "starknet-tokenbound-sdk";
-import { useAccount } from "@starknet-react/core";
-import { useEffect, useState } from "react";
-import { RPC } from "starknet";
 
-import { TOKEN, REGISTRY, ACCOUNT_HASH } from "@/constants";
+import { ACCOUNT_HASH, REGISTRY, TOKEN } from "@/constants";
 
 export const useTokenbound = () => {
   const { account } = useAccount();
